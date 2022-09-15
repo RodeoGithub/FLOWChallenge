@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		E664AA7628D298ED00FDB02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA7528D298ED00FDB02F /* AppDelegate.swift */; };
 		E664AA7828D298ED00FDB02F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA7728D298ED00FDB02F /* SceneDelegate.swift */; };
-		E664AA7A28D298ED00FDB02F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA7928D298ED00FDB02F /* ViewController.swift */; };
+		E664AA7A28D298ED00FDB02F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA7928D298ED00FDB02F /* NavigationViewController.swift */; };
 		E664AA7D28D298ED00FDB02F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E664AA7B28D298ED00FDB02F /* Main.storyboard */; };
 		E664AA7F28D298F800FDB02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E664AA7E28D298F800FDB02F /* Assets.xcassets */; };
 		E664AA8228D298F800FDB02F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E664AA8028D298F800FDB02F /* LaunchScreen.storyboard */; };
 		E664AA8D28D298F900FDB02F /* FLOWChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA8C28D298F900FDB02F /* FLOWChallengeTests.swift */; };
 		E664AA9828D298F900FDB02F /* FLOWChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AA9728D298F900FDB02F /* FLOWChallengeUITests.swift */; };
+		E664AAA928D2A86500FDB02F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AAA828D2A86500FDB02F /* WeatherViewController.swift */; };
+		E664AAAB28D2A88400FDB02F /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664AAAA28D2A88400FDB02F /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		E664AA7228D298ED00FDB02F /* FLOWChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLOWChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E664AA7528D298ED00FDB02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E664AA7728D298ED00FDB02F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E664AA7928D298ED00FDB02F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E664AA7928D298ED00FDB02F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E664AA7C28D298ED00FDB02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E664AA7E28D298F800FDB02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E664AA8128D298F800FDB02F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		E664AA9328D298F900FDB02F /* FLOWChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLOWChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E664AA9728D298F900FDB02F /* FLOWChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLOWChallengeUITests.swift; sourceTree = "<group>"; };
 		E664AA9928D298F900FDB02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E664AAA828D2A86500FDB02F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		E664AAAA28D2A88400FDB02F /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		E664AA7428D298ED00FDB02F /* FLOWChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E664AAA728D29DEE00FDB02F /* Controller */,
+				E664AAA628D29DE800FDB02F /* View */,
+				E664AAA528D29DE100FDB02F /* Model */,
 				E664AA7528D298ED00FDB02F /* AppDelegate.swift */,
 				E664AA7728D298ED00FDB02F /* SceneDelegate.swift */,
-				E664AA7928D298ED00FDB02F /* ViewController.swift */,
 				E664AA7B28D298ED00FDB02F /* Main.storyboard */,
 				E664AA7E28D298F800FDB02F /* Assets.xcassets */,
 				E664AA8028D298F800FDB02F /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				E664AA9928D298F900FDB02F /* Info.plist */,
 			);
 			path = FLOWChallengeUITests;
+			sourceTree = "<group>";
+		};
+		E664AAA528D29DE100FDB02F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E664AAA628D29DE800FDB02F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E664AAA728D29DEE00FDB02F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E664AA7928D298ED00FDB02F /* NavigationViewController.swift */,
+				E664AAA828D2A86500FDB02F /* WeatherViewController.swift */,
+				E664AAAA28D2A88400FDB02F /* WeatherDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E664AA7A28D298ED00FDB02F /* ViewController.swift in Sources */,
+				E664AA7A28D298ED00FDB02F /* NavigationViewController.swift in Sources */,
+				E664AAA928D2A86500FDB02F /* WeatherViewController.swift in Sources */,
 				E664AA7628D298ED00FDB02F /* AppDelegate.swift in Sources */,
+				E664AAAB28D2A88400FDB02F /* WeatherDetailViewController.swift in Sources */,
 				E664AA7828D298ED00FDB02F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
