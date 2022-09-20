@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+/*
 class FLOWChallengeUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -39,4 +39,6 @@ class FLOWChallengeUITests: XCTestCase {
             }
         }
     }
+ 
 }
+*/

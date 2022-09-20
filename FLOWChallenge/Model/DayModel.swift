@@ -1,30 +1,31 @@
 //
-//  WeatherModel.swift
+//  DayModel.swift
 //  FLOWChallenge
 //
-//  Created by Rodrigo Maidana on 15/09/2022.
+//  Created by Rodrigo Maidana on 18/09/2022.
 //
 
 import Foundation
 
-struct WeatherModel {
-    let conditionId: Int
-    let cityName: String
-    let temperature: Double
-    let description: String
-    let feelsLike: Double
-    let coordinates: Coordinate
-    
-    var temperatureString: String {
-        return String(format: "%.1f", temperature)
+struct DayModel {
+    let main: Main
+    let weather: [Weather]
+    let date: Date
+    var minTemperatureString: String {
+        return String(format: "%.1f", main.temp_min)
     }
-    
-    var feelsLikeString: String {
-        return String(format: "%.1f", feelsLike)
+    var maxTemperatureString: String {
+        return String(format: "%.1f", main.temp_max)
+    }
+    var temperatureString: String {
+        return String(format: "%.1f", main.temp)
+    }
+    var humidityString: String {
+        return "\(main.humidity)%"
     }
     
     var conditionName: String {
-        switch conditionId {
+        switch weather[0].id {
         case 200..<233:
             return "cloud.bolt.rain"
         case 300..<322:

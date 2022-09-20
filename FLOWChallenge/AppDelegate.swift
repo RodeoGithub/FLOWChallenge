@@ -14,6 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        let standardUserDefaults = UserDefaults.standard
+        
+        if !standardUserDefaults.bool(forKey: K.UserDefaultsKey.hasLaunchedOnce) {
+            standardUserDefaults.set(true, forKey: K.UserDefaultsKey.hasLaunchedOnce)
+            standardUserDefaults.set(K.unit, forKey: K.UserDefaultsKey.preferedUnits)
+            standardUserDefaults.set(K.buenosAiresCoord, forKey: K.UserDefaultsKey.lastLocation)
+            standardUserDefaults.set("", forKey: K.UserDefaultsKey.lastDescription)
+            standardUserDefaults.set("", forKey: K.UserDefaultsKey.lastTemperature)
+            standardUserDefaults.set("cloud.sun", forKey: K.UserDefaultsKey.lastIcon)
+            standardUserDefaults.set("Buenos Aires", forKey: K.UserDefaultsKey.lastCityName)
+            
+            standardUserDefaults.synchronize()
+        }
         return true
     }
 
