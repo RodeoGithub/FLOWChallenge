@@ -90,14 +90,16 @@ extension WeatherViewController: UISearchBarDelegate {
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        if let city = searchBarField.text {
-            weatherManager.fetchWeather(cityName: city, type: .Current)
-        }
         searchBarField.text = ""
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBarTextDidEndEditing(searchBar)
+        if let city = searchBarField.text {
+            weatherManager.fetchWeather(cityName: city, type: .Current)
+        }
+        searchBar.endEditing(true)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -150,6 +152,7 @@ extension WeatherViewController: WeatherManagerDelegate {
 }
 
 extension WeatherViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
@@ -159,6 +162,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
             createSpinnerView()
         }
     }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let dialogMessage = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         
@@ -168,6 +172,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         
         self.present(dialogMessage, animated: true, completion: nil)
     }
+    
     @IBAction func gpsButtonPressed(_ sender: UIButton) {
         locationManager.requestLocation()
     }

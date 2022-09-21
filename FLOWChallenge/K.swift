@@ -31,7 +31,7 @@ struct K {
         static let lastCityName = "LastCityName"
         
     }
-    static let buenosAiresCoord = City(name: "Buenos Aires", country: "AR", coord: Coordinate(lat:-34.6132,lon:-58.3772))
+    static let buenosAiresCoord = [-34.6132,-58.3772]
     static let seeForecastButtonText = "See Forecast"
     static let searchPlaceholder = "Search a city..."
     static let goBackErrorMessage = "An error occurred, Please try again."
