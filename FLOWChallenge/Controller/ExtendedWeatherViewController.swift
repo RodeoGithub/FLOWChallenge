@@ -27,7 +27,7 @@ class ExtendedWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.title = currentCity?.name
+        self.title = currentCity?.name
         
         weatherManager.delegate = self
         tableView.dataSource = self
@@ -122,10 +122,6 @@ extension ExtendedWeatherViewController: WeatherManagerDelegate {
     func didUpdateExtendedWeather(_ weatherManager: WeatherManager, _ weather: ExtendedWeatherModel) {
         days = weather.daysList
         daysArray = days.sorted(by: { $0.0 < $1.0 })
-        
-        for day in daysArray {
-            print(day.key)
-        }
         
         tableView.reloadData()
         removeSpinnerView()

@@ -30,7 +30,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.title = K.appName
+        self.title = K.appName
         
         iconImage.image = UIImage(systemName: "cloud.sun")
         cityLabel.text = userDefaults.string(forKey: K.UserDefaultsKey.lastCityName)

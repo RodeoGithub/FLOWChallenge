@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             standardUserDefaults.set(K.unit, forKey: K.UserDefaultsKey.preferedUnits)
             standardUserDefaults.set(K.buenosAiresCoord, forKey: K.UserDefaultsKey.lastLocation)
             standardUserDefaults.set("", forKey: K.UserDefaultsKey.lastDescription)
-            standardUserDefaults.set("", forKey: K.UserDefaultsKey.lastTemperature)
+            standardUserDefaults.set("28.1", forKey: K.UserDefaultsKey.lastTemperature)
             standardUserDefaults.set("cloud.sun", forKey: K.UserDefaultsKey.lastIcon)
             standardUserDefaults.set("Buenos Aires", forKey: K.UserDefaultsKey.lastCityName)
             

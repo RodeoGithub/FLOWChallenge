@@ -12,7 +12,7 @@ class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationController?.title = "FLOW Clima Challenge"
+        navigationItem.title = "FLOW Clima Challenge"
         
         let barButtonMenu = UIMenu(title: "Preferences", image: UIImage(systemName: "list.dash"), children:
                                     [UIAction(title: NSLocalizedString("Copy", comment: ""), image: UIImage(systemName: "doc.on.doc"), handler: { (_) in
